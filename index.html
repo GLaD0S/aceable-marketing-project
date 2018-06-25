@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <title>Aceable Piloting</title>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/style.css">
+    </head>
+    <body>
+        <div id="app">
+            <div class="products">
+                <h1 class="products__title">Robot Piloting Courses</h1>
+                <table class="products__table table" v-if="products.length > 0">
+                    <thead>
+                      <tr>
+                        <th>Title</th>
+                        <th class="products__price-toggle" v-on:click="sortToggle">Price (US)
+                            <span class="products__toggle-arrow" v-if="lastSortMethod == 'dec'">&#x25B2;</span>
+                            <span class="products__toggle-arrow" v-else>&#x25BC;</span></th>
+                        <th>Description</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr v-for="product in products">
+                        <td>{{ product.title }}</td>
+                        <td>${{ product.price }}</td>
+                        <td>{{ product.description }}</td>
+                      </tr>
+                    </tbody>
+                </table>
+                <h2 class="products__error" v-if="products.length == 0">There do not seem to be any products. Come back soon!</h2>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script>
+        <script src="/js/app.js"></script>
+    </body>
+</html>
