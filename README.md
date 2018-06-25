@@ -8,4 +8,4 @@ Node was only used to create a simple http server in order to perform proper aja
 
 ### Project Notes
 
-I extended the features every so slighly from the project requirements. I added the ability to sort on price by clicking the table head with "Price (US)". I realize as a marketing developer that I would most likely not place this sort of information within a table and I would not deviate from the specs without a conversation but I wanted to use another feature of Vue's 'Reactive' nature other than simply pulling in the data.
+I extended the features every so slighly from the project requirements. I added the ability to sort on price by clicking the table head with "Price (US)". I realize as a marketing developer that I would most likely not place this sort of information within a table and I would not deviate from the specs without a conversation but I wanted to use another feature of Vue's 'Reactive' nature other than simply pulling in the data. I also added in some templating logic that shows an error message if no products are defined in the Vue app object.
