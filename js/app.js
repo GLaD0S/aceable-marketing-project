@@ -19,7 +19,6 @@ const app = new Vue({
         },
         /* Helper function for toggling between sorting state based on previous sort method used. */
         sortToggle () {
-            console.log("in Sort method");
             if(this.lastSortMethod == "dec") {
                 this.sortPriceAscending();
                 this.lastSortMethod = "asc";
